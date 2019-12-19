@@ -22,7 +22,7 @@ function draw() { //código que corre em loop
    posX = mouseX
    posY = mouseY
 
-   numDiv = 7; 
+   numDiv = 7;
    for ( i=0; i < numDiv-1; i ++){
      for (j=0; j < numDiv-1; j++){
        avatar ((i+1)*width/numDiv, (j+1)*height/numDiv,40); } }
@@ -31,6 +31,11 @@ function draw() { //código que corre em loop
    function avatar (posX,posY,raio) {
 
 
+   fill (90,70,60);
+   square (posX-raio/2,posY-raio/1.5, raio/1, 255,255,8,8)
+   square (posX-raio/1.5,posY-raio/2, raio/1, 255,255,8,8) // cabelo
+   square (posX-raio/3,posY-raio/2, raio/1, 255,255,8,8) // cabelo
+  
    fill(255,202,150)
    ellipse(posX,posY,raio)
    fill (255)
