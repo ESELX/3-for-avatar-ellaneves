@@ -1,4 +1,6 @@
 //Variáveis tipo let nomeDaVar;
+let numDiv
+
 
 function setup() { //código que só corre uma vez
 
@@ -14,7 +16,34 @@ function setup() { //código que só corre uma vez
 }
 
 function draw() { //código que corre em loop
-  background(220); //podem apagar esta linha!
+  background(220);
+  background(220);
+
+   posX = mouseX
+   posY = mouseY
+
+   numDiv = 7; 
+   for ( i=0; i < numDiv-1; i ++){
+     for (j=0; j < numDiv-1; j++){
+       avatar ((i+1)*width/numDiv, (j+1)*height/numDiv,40); } }
+
+ }
+   function avatar (posX,posY,raio) {
 
 
+   fill(255,202,150)
+   ellipse(posX,posY,raio)
+   fill (255)
+   ellipse (posX-raio/4,posY-raio/10, raio/4, raio/5); //1 -
+   ellipse (posX+raio/4, posY-raio/10,raio/4, raio/5) // 2 + //ellipse (posX-raio/35,posY-raio/40,raio/10)
+   fill (80,180,200)
+   ellipse (posX-raio/4, posY-raio/10, raio/8);
+   ellipse (posX+raio/4, posY-raio/10, raio/8);
+   fill (0)
+   ellipse (posX-raio/4, posY-raio/10, raio/20);
+   ellipse (posX+raio/4, posY-raio/10, raio/20);
+
+
+   fill (255, 90, 90);
+   arc(posX-raio/25, posY+raio/5, raio/5, raio/5, 0, -450+ QUARTER_PI, CHORD);// boca
 }
